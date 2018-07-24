@@ -18,7 +18,7 @@
         "serverSide": true,
         "ajax":
       {
-          "url": "/Home/getSalesOrders",
+          "url": "/Plugin/GetData",
           "type": "POST",
           "dataType": "JSON"
       },
