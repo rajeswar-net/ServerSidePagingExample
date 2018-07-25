@@ -260,6 +260,7 @@
     <Content Include="Views\Shared\_ViewPartialSalesOrderList.cshtml" />
     <Content Include="Views\WithPagedList\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\WithPagedList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,64 @@
+﻿@using PagedList.Mvc
+@model  PagedList.IPagedList<ServerSidePagingExample.employee>
+@{
+    ViewBag.Title = "WithPagedList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>WithPagedList</h2>
+<div class="container">
+
+    <div class="row">
+        <div class="panel-heading">
+            <div class="col-md-8">
+                <h3>
+                    <i class="fa fa-table"></i>
+                    <span>Employee Paged List</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="well bs-component">
+            <br />
+            <div class="row">
+                <div>
+                    <table class="table table-striped table-bordered table-hover" cellspacing="0" align="center">
+                        <thead>
+                            <tr>
+                                <th>Employee Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>Age</th>
+                                <th>Start Date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <tr>
+                                <td>@Model[i].employee_id</td>
+                                <td>@Model[i].first_name</td>
+                                <td>@Model[i].last_name</td>
+                                <td>@Model[i].sex</td>
+                                <td>@Model[i].age</td>
+                                <td>@Model[i].start_date</td>
+                                <td>@Model[i].salary</td>
+                            </tr>
+
+                        }
+                    </table>
+                </div>
+                <div id="container" style="margin-left: 20px">
+                    <p></p>
+                    <p></p>
+                    <div class="pagination" style="margin-left: 400px">
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                        of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("WithPagedList", "Employee", new { page }))
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

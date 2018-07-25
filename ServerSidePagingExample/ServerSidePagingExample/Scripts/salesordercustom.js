@@ -52,7 +52,7 @@
         "serverSide": true, // for process server side  
         "filter": true, // this is for disable filter (search box)  
         "orderMulti": false, // for disable multiple column at once  
-        "pageLength": 5,  
+        "pageLength": 10,  
   
         "ajax": {  
             "url": "/Employee/LoadEmployeeData",  
