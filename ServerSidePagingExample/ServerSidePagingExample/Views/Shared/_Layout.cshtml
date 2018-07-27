@@ -93,10 +93,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Home"><i class="fa fa-circle-o"></i> With Data Tables</a></li>
-                            <li><a href="WithPagedList"><i class="fa fa-circle-o"></i> With Paged List</a></li>
+                            <li><a href='@Url.Action("Index","Home")'><i class="fa fa-circle-o"></i> With Data Tables</a></li>
+                            <li><a href='@Url.Action("Index","WithPagedList")'><i class="fa fa-circle-o"></i> With Paged List</a></li>
                         </ul>
-                        
+
                     </li>
                     <li class="treeview">
                         <a href="#">
@@ -106,10 +106,21 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Employee"><i class="fa fa-circle-o"></i> With Data Tables</a></li>
-                            <li><a href="WithPagedList"><i class="fa fa-circle-o"></i> With Paged List</a></li>
+                            <li><a href='@Url.Action("Index","Employee")'><i class="fa fa-circle-o"></i> With Data Tables</a></li>
+                            <li><a href='@Url.Action("WithPagedList","Employee")'><i class="fa fa-circle-o"></i> With Paged List</a></li>
                         </ul>
 
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>PDF Example(ROTATIVA)</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href='@Url.Action("Index","NewEmployee")'><i class="fa fa-circle-o"></i> With Data Tables</a></li>
+                        </ul>
                     </li>
                 </ul>
             </section>
@@ -313,6 +324,6 @@
     @Scripts.Render("~/bundles/bootstapdatatable")
     <script src="~/Scripts/salesordercustom.js"></script>
     @RenderSection("scripts", required: false)
-    
+
 </body>
 </html>
